@@ -1,19 +1,20 @@
 
 public class Book {
 	private String name;
-	private Author author;
+	private Author[] authors;
 	private double price; 
 	private int qty = 0;
+	private Author[] listAuthors;
 	
-	public Book (String name, Author author, double price) { 
+	public Book (String name, Author[] authors, double price) { 
 		this.name = name;
-		this.author = author;
+		this.authors = authors;
 		this.price = price;
 		
 	}
-	public Book (String name, Author author, double price, int qty) {
+	public Book (String name, Author[] authors, double price, int qty) {
 		this.name = name;
-		this.author = author;
+		this.authors = authors;
 		this.price = price;
 		this.qty = qty;
 	}
@@ -22,8 +23,8 @@ public class Book {
 		return name;
 	}
 	
-	public Author getAuthor() {
-		return author;
+	public Author[] getAuthors() {
+		return authors;
 	}
 	
 	public double getPrice() {
@@ -43,9 +44,10 @@ public class Book {
 	}
 	
 	public String toString() {
-		return "Book[name=" + name + ", Author=" + author + ", price=" + price + ", qty=" + qty + "]";
+		return "Book[name=" + name + ", authors=" + authors + ", price=" + price + ", qty=" + qty + "]";
 	}
-	public String getAuthorName() {
-		   return author.getName();  // cannot use author.name as name is private in Author class
+	public String getAuthorsNames() {
+		for (int i = 0; i < authors.length; ++i)
+		   listAuthors[i] = authors[i].getName();  // cannot use author.name as name is private in Author class
 	}
 }
