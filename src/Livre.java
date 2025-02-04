@@ -24,4 +24,8 @@ public class Livre {
 	public String toString() {
 		return "Le nom du livre est " + name + ", il coûte " + price + ", et la quantite disponible est " + quantite + "."; 
 	}
+	
+	public void setQuantite(int quantite) {
+		this.quantite = quantite; 
+	}
 }
