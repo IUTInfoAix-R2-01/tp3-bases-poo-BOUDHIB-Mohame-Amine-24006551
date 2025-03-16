@@ -23,6 +23,14 @@ public class TestBook {
 		Book anotherBook = new Book("more Java", 
 		      new Author("Paul Tan", "paul@somewhere.com", 'm'), 29.95);
 		System.out.println(anotherBook);  // toString()
+		
+		System.out.println(anotherBook.getAuthor().getName());
+		System.out.println(anotherBook.getAuthor().getEmail());
+		// Avec méthode implémenter dans la classe Book
+		System.out.println(anotherBook.getAuthorEmail());
+		System.out.println(anotherBook.getAuthorName());
+		System.out.println(anotherBook.getAuthorGender());
+
 	}
 
 }
